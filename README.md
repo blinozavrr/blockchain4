@@ -76,10 +76,8 @@ The model will be marked as "Sold".
 The inventory count will be adjusted accordingly.
 
 ## Screenshots
-![alt text](<Screenshots/Снимок экрана 2025-02-05 171431.png>)
-![alt text](<Screenshots/Снимок экрана 2025-02-05 171533.png>)
-![alt text](<Screenshots/Снимок экрана 2025-02-05 171639.png>)
-![alt text](<Screenshots/Снимок экрана 2025-02-05 171646.png>)
+![image](https://github.com/user-attachments/assets/a0a22398-a203-44cb-93de-02a35803629d)
+
 
 
 
