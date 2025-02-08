@@ -32,8 +32,7 @@ Ganache (for local blockchain testing)
 Clone the Repository:
 
 ```bash
-git clone https://github.com/Zhanbatyr06/Blockchain_4.git
-cd Blockcahin_4
+cd my-marketplace
 ```
 Install Dependencies:
 
