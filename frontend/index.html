@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Models Marketplace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+    }
+    header {
+      background: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    input[type="text"],
+    input[type="number"] {
+      padding: 8px;
+      width: calc(100% - 16px);
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .model {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      background: #fafafa;
+    }
+    .model a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Models Marketplace</h1>
+  </header>
+  <div class="container">
+    <div class="section">
+      <button id="connectWallet">Connect Wallet (MetaMask)</button>
+      <div id="accountInfo"></div>
+    </div>
+
+    <div class="section">
+      <h2>Token Balance</h2>
+      <p>Your balance: <span id="tokenBalance">0</span></p>
+      <button id="refreshBalance">Refresh Balance</button>
+    </div>
+
+    <div class="section">
+      <h2>Available AI Models</h2>
+      <div id="modelsList"></div>
+    </div>
+
+    <div class="section">
+      <h2>Add New AI Model</h2>
+      <input type="text" id="modelName" placeholder="Model Name">
+      <input type="text" id="modelDescription" placeholder="Description">
+      <input type="number" id="modelPrice" placeholder="Price (in tokens)">
+      <input type="text" id="modelFileUrl" placeholder="Model File URL">
+      <button id="listModelBtn">Add Model</button>
+    </div>
+  </div>
+
+  <!-- Подключаем ethers.js -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
