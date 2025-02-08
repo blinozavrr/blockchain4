@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Model Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <h1 class="logo">AI Marketplace</h1>
+        <div class="wallet-section">
+          <button id="connectWalletBtn" class="btn">Connect Wallet</button>
+          <p id="walletStatus" class="status">Not connected</p>
+          <p id="tokenBalance" class="balance">Balance: 0 AST</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="list-model" class="card">
+        <h2>List  AI Model</h2>   
+        <form id="listModelForm">
+          <input type="text" id="modelName" placeholder="Model Name" required />
+          <textarea id="modelDescription" placeholder="Model Description" required></textarea>
+          <input type="number" id="modelPrice" placeholder="Price in Tokens" required />
+          <button type="submit" class="btn">List Model</button>
+        </form>
+      </section>
+
+      <section id="modelsList" class="card">
+        <h2>Available AI Models</h2>
+        <ul id="modelsContainer" class="models-grid"></ul>
+      </section>
+
+      <section id="purchase-model" class="card">
+        <h2>Purchase AI Model</h2>
+        <input type="number" id="purchase-model-id" placeholder="Model ID" min="1" required />
+        <button id="purchase-button" class="btn">Purchase</button>
+        <p id="purchase-status" class="success-message" style="display: none"></p>
+      </section>
+
+      <section id="rate-model" class="card">
+        <h2>Rate AI Model</h2>
+        <input type="number" id="rate-model-id" placeholder="Model ID" />
+        <input type="number" id="rate-value" placeholder="Rating (1-5)" min="1" max="5" />
+        <button id="rate-button" class="btn">Rate</button>
+      </section>
+
+      <section id="model-details" class="card">
+        <h2>AI Model Details</h2>
+        <input type="number" id="model-id-input" placeholder="Enter Model ID" />
+        <button id="model_button" class="btn">Get Details</button>
+
+        <div id="model-info" class="model-info" style="display: none">
+          <p><strong>Name:</strong> <span id="model-name"></span></p>
+          <p><strong>Description:</strong> <span id="model-description"></span></p>
+          <p><strong>Price:</strong> <span id="model-price"></span> tokens</p>
+          <p><strong>Creator:</strong> <span id="model-creator"></span></p>
+          <p><strong>Average Rating:</strong> <span id="model-average-rating"></span>/5</p>
+          <p><strong>Number of Ratings:</strong> <span id="model-ratings-count"></span></p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
